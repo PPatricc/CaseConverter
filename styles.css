@@ -5,7 +5,7 @@
 }
 
 html{
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
 }
 
 body{
@@ -31,6 +31,44 @@ body{
     height: 30px;
     width: 160px;
     margin:3px;
+}
+.btnhover1{
+    background: transparent; outline: none;
+    position: relative;
+    border: 1px solid #52418f;
+    padding: 15px 20px;
+    overflow: hidden;
+    margin: 3px;
+    color: rgba(26, 14, 80, 0.72);
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: .8em;
+}
+
+.btn, .btnhover1 {
+    cursor: pointer
+}
+
+.btnhover1:hover:before{
+    opacity: 1; transform: translate(0,0);
+}
+button:hover div{
+    opacity: 0; transform: translate(100%,0)
+}
+button div{
+    transition: all .4s ease-in-out;
+}
+
+.btnhover1:before{
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translate(-100%,0);
+    transition: all .4s ease-in-out;
 }
 
 .center{
