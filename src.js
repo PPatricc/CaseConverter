@@ -25,6 +25,7 @@ function capLetters_after_sign(string, sign){
     const capitalizeWords = words.map(value=> capitalizeFirstLetter(value));
     textTochange.value = capitalizeWords.join(sign);
 }
+
 function download(filename, text) {
     const element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
